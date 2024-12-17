@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+    --oscuro: #1a202c;
+    --medio-oscuro: #2d3748;
+    --claro-oscuro: #4a5568;
+    --azul: #2c5282;
+    --azul-claro: #63b3ed;
+    --acento: #0085ae;
+    --amarillo: #ffcc00;
+    --blanco-claro: #ebf8ff;
+    --azul-oscuro: #2a4365;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* Estilos del body */
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/mapa2.jpg');
+    background-size: cover;
+    color: white;
+}
+
+/* Header */
+header {
+    background-color: var(--azul);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    height: auto; /* Altura dinámica */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+header img {
+    width: 70px;
+    height: auto;
+}
+
+header h1 {
+    font-size: 1.2em;
+    color: var(--blanco-claro);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    margin: 0;
+    position: static;
+    text-align: center;
+}
+
+header a {
+    font-size: 0.9em;
+    text-decoration: none;
+    color: white;
+    padding: 8px 15px;
+    background-color: var(--azul-oscuro);
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+header a:hover {
+    background-color: var(--azul-claro);
+    color: var(--azul-oscuro);
+}
+
+/* Main y Contenedor */
+main div {
+    padding: 20px;
+    background-color: rgba(5, 47, 77, 0.2);
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Formulario */
+form {
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgba(5, 47, 77, 0.35);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: var(--blanco-claro);
+}
+
+form input[type="text"],
+form input[type="file"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--claro-oscuro);
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* Botones de acción */
+#subirBandera, #subirBtn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--azul-claro);
+    color: white;
+    font-size: 0.9em;
+    border-radius: 5px;
+    border: 2px solid var(--azul-oscuro);
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+#subirBtn:hover, #subirBandera:hover {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco-claro);
+    border-color: var(--azul-claro);
+    box-shadow: 0px 4px 12px var(--azul-claro);
+    transform: translateY(-2px);
+}
+
+form input[type="file"] {
+    display: none; /* Oculta el input de tipo file */
+}
+
+.cancel {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco-claro);
+}
+
+.cancel:hover {
+    background-color: var(--azul);
+}
+
+.update {
+    background-color: var(--acento);
+    color: white;
+}
+
+.update:hover {
+    background-color: var(--azul-claro);
+}
+
+/* Fieldset */
+fieldset {
+    border: 2px solid var(--claro-oscuro);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+legend {
+    font-size: 1.2em;
+    color: var(--amarillo);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+fieldset textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 2px solid var(--claro-oscuro);
+    background-color: var(--claro-oscuro);
+    color: white;
+    padding: 10px;
+}
+
+/* Botón volver */
+.volver-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    text-align: center;
+    text-decoration: none;
+    color: var(--blanco-claro);
+    background-color: var(--azul-oscuro);
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.volver-btn:hover {
+    background-color: var(--azul);
+    transform: translateY(-2px);
+}
+
+/* Lista de errores */
+.error-list {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 1em;
+    list-style: none;
+}
+
+.error-msg {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+/* Media Queries para Tablet */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+    }
+
+    header img {
+        width: 60px;
+        margin-bottom: 10px;
+    }
+
+    header h1 {
+        font-size: 1.1em;
+        margin: 5px 0;
+    }
+
+    header a {
+        font-size: 0.8em;
+        padding: 6px 10px;
+        margin-top: 10px;
+    }
+
+    main div {
+        padding: 10px;
+    }
+
+}
